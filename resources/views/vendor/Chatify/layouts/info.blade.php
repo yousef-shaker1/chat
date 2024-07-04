@@ -3,17 +3,14 @@
 {{-- <p class="info-name">{{ config('chatify.name') }}</p> --}}
 
 <div class="messenger-infoView-btns">
-<a class="danger delete-conversation" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-    <i class="danger bx bx-log-out"></i>
-    تسجيل خروج
-</a>
-<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-    @csrf
-</form>
-{{-- <form action="{{ route('logout') }}" method="POST">
-    @csrf
-    <button type="submit">تسجيل الخروج</button>
-</form> --}}
+
+    <a class="danger delete-conversation" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        تسجيل الخروج
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+
 </div>
 
 {{-- <div class="messenger-infoView-btns">
