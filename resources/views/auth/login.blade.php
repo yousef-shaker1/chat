@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="max-width: 600px; margin: auto; padding: 20px;">
         <h2 class="text-center">تسجيل الدخول</h2>
         <?php //if (!empty($_POST['submit'])){?>
         <form method="POST" action="{{ route('login') }}">
