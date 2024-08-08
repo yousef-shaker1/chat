@@ -3,19 +3,15 @@
 {{-- <p class="info-name">{{ config('chatify.name') }}</p> --}}
 
 <div class="messenger-infoView-btns">
-
     <a class="danger delete-conversation" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         تسجيل الخروج
     </a>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
-
 </div>
 
-{{-- <div class="messenger-infoView-btns">
-    <a href="#" class="danger delete-conversation">Delete Conversation</a> --}}
-{{-- shared photos --}}
+
 <div class="messenger-infoView-shared">
     <p class="messenger-title"><span>Shared Photos</span></p>
     <div class="shared-photos-list"></div>

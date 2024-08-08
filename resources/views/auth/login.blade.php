@@ -21,16 +21,25 @@
 <body>
     <div class="container" style="max-width: 600px; margin: auto; padding: 20px;">
         <h2 class="text-center">تسجيل الدخول</h2>
-        <?php //if (!empty($_POST['submit'])){?>
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
                 <label for="email">البريد الإلكتروني</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required>
+                @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="password">كلمة المرور</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
         </form>
@@ -41,5 +50,5 @@
             <a href="{{ route('register') }}">ليس لديك حساب؟ قم بالتسجيل الآن</a>
         </div>
     </div>
-</body>
+</body> 
 </html>

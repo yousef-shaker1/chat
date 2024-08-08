@@ -5,7 +5,7 @@
   </div>
 
   {{-- ---------------------- Delete Modal ---------------------- --}}
-  <div class="app-modal" data-name="delete">
+  {{-- <div class="app-modal" data-name="delete">
       <div class="app-modal-container">
           <div class="app-modal-card" data-name="delete" data-modal='0'>
               <div class="app-modal-header">Are you sure you want to delete this?</div>
@@ -16,7 +16,7 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> --}}
   {{-- ---------------------- Alert Modal ---------------------- --}}
   <div class="app-modal" data-name="alert">
       <div class="app-modal-container">
