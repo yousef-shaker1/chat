@@ -9,11 +9,11 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\GroupPublicController;
 use App\Http\Controllers\OrganizationController;
+//https://ipa.waslahq.com
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-
 
 
 // 'role:superadmin'

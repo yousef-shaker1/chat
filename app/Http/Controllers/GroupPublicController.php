@@ -51,7 +51,7 @@ class GroupPublicController extends Controller
     {
         $userId = Auth::id();
 
-        $groupIds = public_group_user::where('user_id', $userId)->pluck('public_group_id'); 
+        $groupIds = public_group_user::where('user_id', $userId)->pluck('public_group_id');
 
         $groups = public_group::with(['messages' => function($query) {
             $query->orderBy('created_at', 'desc')->take(1);
@@ -231,7 +231,7 @@ class GroupPublicController extends Controller
         $group = public_group::find($id);
         $userId = Auth::id();
         $users = public_group_user::where('public_group_id', $id)->pluck('user_id');
-        if (!$users->contains($userId)) {
+        if (!$users->contains($userId)) {//contains للتحقق من وجود قيمة معينة في مجموعة ولا لا
             return $this->errorResponse('You are not a member of this group', 403);
         }
 
